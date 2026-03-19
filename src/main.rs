@@ -24,9 +24,10 @@ fn main() -> io::Result<()> {
                 if sub_path.is_dir() {
                     let readme_path = sub_path.join("README.md");
                     if readme_path.exists()
-                        && let Ok(result) = parse_profile_file(&readme_path) {
-                            render_profile_table(result);
-                        }
+                        && let Ok(result) = parse_profile_file(&readme_path)
+                    {
+                        render_profile_table(result);
+                    }
                 }
             }
         }
